@@ -37,5 +37,5 @@ public class SushiMovement : MonoBehaviour
         {
             pos.y = pos.y + speed;
         }
-    }
+    } //
 }
