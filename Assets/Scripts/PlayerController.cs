@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public GameObject enableDisable;
+    public SpriteRenderer emote;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,10 @@ public class PlayerController : MonoBehaviour
         Vector2 pos = transform.position;
         if (pos.x > 2.8 && pos.y > 0.5)
         {
-            
+            emote.enabled = true;
+        } else
+        {
+            emote.enabled = false;
         }
     }
     public void moveUp()
