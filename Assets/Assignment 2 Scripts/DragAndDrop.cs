@@ -11,6 +11,9 @@ public class DragAndDrop : MonoBehaviour
     //Follow mouse position
     bool followMouse;
 
+    //Grow when placed into scene
+    bool big;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +43,7 @@ public class DragAndDrop : MonoBehaviour
         if (mouseHovering == true && Input.GetMouseButtonDown(0))
         {
            followMouse = true;
+            big = true;
         }
 
         //When letting go of mouse, stop following the cursor
@@ -53,6 +57,14 @@ public class DragAndDrop : MonoBehaviour
         {
             transform.position = mouse;
         }
+
+        if (big == true)
+        {
+            size.x = 3;
+            size.y = 3;
+        }
+
+        transform.localScale = size;
     }
     
 }
