@@ -15,7 +15,7 @@ public class BulletBehaviour : MonoBehaviour
     void Update()
     {
         Vector2 pos = transform.position;
-        pos.x += speed * Time.Delta;
+        pos.x += speed * Time.deltaTime;
         transform.position = pos;
     }
 }
