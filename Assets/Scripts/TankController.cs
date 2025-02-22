@@ -5,6 +5,7 @@ using UnityEngine;
 public class TankController : MonoBehaviour
 {
     public float speed;
+    public bool invert;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,13 @@ public class TankController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             size.x = 3;
+            invert = false;
         }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             size.x = -3;
+            invert = true;
         }
 
         transform.position = pos;
