@@ -10,7 +10,7 @@ public class TankController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,4 +36,11 @@ public class TankController : MonoBehaviour
         transform.position = pos;
         transform.localScale = size;
     }
+
+    public void speedChange(float s)
+    {
+        s = speed;
+    }
+
+        
 }
