@@ -23,11 +23,15 @@ public class SwitchBodies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         //Reset body variable
-        if (body >= 8 || body == 0)
+        if (body >= 8)
         {
             body = 1;
+        }
+        else if (body <= 0)
+        {
+            body = 7;
         }
 
         //Show corresponding body sprites:

@@ -58,6 +58,7 @@ public class DragAndDrop : MonoBehaviour
             transform.position = mouse;
         }
 
+        //Makes object grow
         if (big == true)
         {
             size.x = 3;
