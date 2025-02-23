@@ -13,6 +13,7 @@ public class SwitchBodies : MonoBehaviour
     public GameObject body5;
     public GameObject body6;
     public GameObject body7;
+    public GameObject body10;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +26,11 @@ public class SwitchBodies : MonoBehaviour
     {
 
         //Reset body variable
-        if (body >= 8)
+        if (body == 8)
         {
             body = 1;
         }
-        else if (body <= 0)
+        else if (body == 0)
         {
             body = 7;
         }
@@ -82,6 +83,13 @@ public class SwitchBodies : MonoBehaviour
             body7.GetComponent<SpriteRenderer>().enabled = true;
         }
         else { body7.GetComponent<SpriteRenderer>().enabled = false; }
+
+        //Dead Body when Timer reaches zero
+        if (body == 10)
+        {
+            body10.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        else { body10.GetComponent<SpriteRenderer>().enabled = false; }
     }
 
     //Change body variable with Right Arrow button 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaterDroplet : MonoBehaviour
 {
+    //Speed and water meter
     public float speed;
 
     // Update is called once per frame
@@ -13,13 +14,13 @@ public class WaterDroplet : MonoBehaviour
         Vector2 pos = transform.position;
         pos.y -= speed * Time.deltaTime;
        
-        //Destroy itself when ouching character
+        //Destroy itself when touching character
         if (pos.y < 0.5)
         {
             Destroy(gameObject);
         }
        
         transform.position = pos;
-                
+       
     }
 }

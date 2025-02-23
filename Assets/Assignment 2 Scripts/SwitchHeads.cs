@@ -25,10 +25,10 @@ public class SwitchHeads : MonoBehaviour
     {
 
         //Reset head variable
-        if (head >= 8)
+        if (head == 8)
         {
             head = 1;
-        } else if (head <= 0) {
+        } else if (head == 0) {
             head = 7;
         }
 
